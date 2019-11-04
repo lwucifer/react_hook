@@ -10,6 +10,7 @@ const Auth: React.FC<AuthProp> = props => {
     const store = grobalStore!.loginUser;
 
     return useObserver(() => {
+        return <>{props.children}</>;
         return <>{store.loggedIn ? props.children : <Redirect to={"/"} />}</>;
     });
 };
