@@ -11,7 +11,7 @@ const Auth: React.FC<AuthProp> = props => {
 
     return useObserver(() => {
         return <>{props.children}</>;
-        return <>{store.loggedIn ? props.children : <Redirect to={"/"} />}</>;
+        // return <>{store.loggedIn ? props.children : <Redirect to={"/"} />}</>;
     });
 };
 

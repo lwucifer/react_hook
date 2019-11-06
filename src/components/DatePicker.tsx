@@ -53,10 +53,10 @@ const DatePicker: React.FC<DatePickerProp> = prop => {
     };
 
     const TextOnBlur = (value: string | undefined) => {
-        // let target = AppUtils.formatDate(value, prop.type === 'date' ? '' : 'yyyy/mm');
-        // let dVal = dayjs(target);
-        // let val = dVal.isValid() ? dVal.format(format) : "";
-        // prop.onChange && prop.onChange!(val);
+        let target = AppUtils.formatDate(value, prop.type === 'date' ? '' : 'yyyy/mm');
+        let dVal = dayjs(target);
+        let val = dVal.isValid() ? dVal.format(format) : "";
+        prop.onChange && prop.onChange!(val);
     };
 
     let dVal = dayjs(prop.value);
